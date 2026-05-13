@@ -9,12 +9,12 @@ To create a new project using this Confederation College Astro theme:
 ### Create a new project using this template
 
 ```bash
-npm create astro@latest cc-astro-project -- --template ConfederationCollege-ca/cc-astro-starter
+npm create astro@latest my-project -- --template ConfederationCollege-ca/cc-astro-starter
 ```
 
 ```bash
 # Navigate to project folder
-cd my-cc-project
+cd my-project
 
 # Install dependencies
 npm install
