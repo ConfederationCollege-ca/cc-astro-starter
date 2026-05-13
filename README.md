@@ -9,7 +9,7 @@ To create a new project using this Confederation College Astro theme:
 ### Create a new project using this template
 
 ```bash
-npm create astro@latest cc-astro-project -- --template ConfederationCollege-ca/cc-astro-confederation-theme
+npm create astro@latest cc-astro-project -- --template ConfederationCollege-ca/cc-astro-starter
 ```
 
 ```bash
