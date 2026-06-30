@@ -1,9 +1,10 @@
 ---
-const {
-  primaryColor = "currentColor",
-  // secondaryColor = "#005680",
-  ...props
-} = Astro.props;
+interface Props extends astroHTML.JSX.SVGAttributes {
+  /** Hex, CSS color, or theme token e.g. "var(--color-accent-red)" */
+  primaryColor?: string;
+}
+
+const { primaryColor = "currentColor", ...props } = Astro.props;
 ---
 
 <svg

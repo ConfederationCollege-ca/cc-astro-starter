@@ -1,8 +1,8 @@
-# Copilot Instruction for AstroJS v5 + Tailwind v4+
+# Copilot Instruction for AstroJS v7 + Tailwind v4+
 
 ## Key Principles
 
-1. **Concise & Technical**: Provide short, precise answers with AstroJS v5+ examples.
+1. **Concise & Technical**: Provide short, precise answers with AstroJS v7+ examples.
 2. **Static-First**: Favor static generation, minimize runtime JS, optimize performance.
 3. **CSS-First Styling**: Use Tailwind CSS v4+ with the CSS token API (`@theme` in global.css). Avoid JS-based theming.
 4. **Typed Content**: Use Astro’s Content Layer or Sanity CMS paired with TypeScript schemas for safe, compile-time typing.
@@ -37,12 +37,9 @@ sanity.config.ts          # optional, Sanity configuration
 
 ## Icons & SVG Management
 
-- Use [astro-icon](https://www.astroicon.dev/getting-started/) for all icon needs.
-- Choose one consistent Iconify collection (`@iconify-json/*`) per project.
-- Use the `<Icon />` component from astro-icon instead of custom SVG components.
-- Place custom SVG files in `src/assets/icons/` directory for automatic slug-based referencing.
-- Organize icons in sub-folders within `src/assets/icons/` for better organization.
-- Avoid inline SVG or transforming SVGs to Astro components.
+- For brand assets (logos, marks), use prop-driven SVG `.astro` components under `src/components/svg/` (e.g. `LogoIcon.astro`, `LogoHorizontal.astro`, `LogoVertical.astro`). Expose color props (defaulting to `currentColor`) and spread `...props`, and include a `<title>` for accessibility.
+- For general iconography, use [astro-icon](https://www.astroicon.dev/getting-started/) with one consistent Iconify collection (`@iconify-json/*`) per project, via the `<Icon />` component.
+- Place custom SVG files for astro-icon in `src/assets/icons/`, organized in sub-folders for clarity.
 
 ---
 
@@ -120,7 +117,7 @@ sanity.config.ts          # optional, Sanity configuration
 
 ## Styling (Tailwind v4+)
 
-- Install with `@astrojs/tailwind`.
+- Install with the `@tailwindcss/vite` plugin (registered in `astro.config.mjs`). No `tailwind.config.*` file — Tailwind v4 is CSS-first.
 - Primary styling via `global.css` and `@theme`:
 
   ```css
@@ -183,7 +180,7 @@ sanity.config.ts          # optional, Sanity configuration
 ## Performance
 
 - Minimize runtime JS: prioritize static components.
-- Image optimization: `@astrojs/image` for basic ones or `@unpic/astro` for optimized advanced use.
+- Image optimization: Astro's built-in `<Image />` / `astro:assets` for basic needs or `@unpic/astro` for optimized advanced use.
 - Lazy-load assets.
 - Monitor Core Web Vitals.
 
@@ -254,7 +251,7 @@ sanity.config.ts          # optional, Sanity configuration
 
 ### Reference
 
-- **Astro v5 Documentation**: https://docs.astro.build
+- **Astro v7 Documentation**: https://docs.astro.build
 - **Content Layer**: https://docs.astro.build/en/guides/content-collections/
 - **Astro Integrations**: https://docs.astro.build/en/guides/integrations/
 - **Turso for SQLite**: https://turso.tech/

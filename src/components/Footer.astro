@@ -1,14 +1,14 @@
 ---
 // Get current year for copyright statement
 const currentYear = new Date().getFullYear();
-import LogoHorizontalSVG from "./svg/LogoHorizontalSVG.astro";
+import LogoHorizontal from "./svg/LogoHorizontal.astro";
 ---
 
 <footer aria-labelledby="footer-heading" class="bg-gray-900 text-white">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex flex-col md:flex-row justify-between items-center">
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-between md:flex-row">
       <!-- Logo -->
       <div class="mb-6 md:mb-0">
         <a
@@ -16,7 +16,7 @@ import LogoHorizontalSVG from "./svg/LogoHorizontalSVG.astro";
           class="inline-block"
           aria-label="Confederation College Home"
         >
-          <LogoHorizontalSVG
+          <LogoHorizontal
             primaryColor="#ffffff"
             secondaryColor="#ffffff"
             class="h-12 w-auto"
@@ -28,7 +28,7 @@ import LogoHorizontalSVG from "./svg/LogoHorizontalSVG.astro";
 
       <!-- Contact info -->
       <address
-        class="not-italic text-center md:text-right text-small text-gray-300 mb-6 md:mb-0"
+        class="text-small mb-6 text-center text-gray-300 not-italic md:mb-0 md:text-right"
       >
         <p>Confederation College</p>
         <p>Thunder Bay, Ontario</p>
@@ -41,8 +41,8 @@ import LogoHorizontalSVG from "./svg/LogoHorizontalSVG.astro";
     </div>
 
     <!-- Copyright -->
-    <div class="mt-8 pt-6 border-t border-gray-700">
-      <p class="text-small text-gray-300 text-center">
+    <div class="mt-8 border-t border-gray-700 pt-6">
+      <p class="text-small text-center text-gray-300">
         &copy; {currentYear} Confederation College. All rights reserved.
       </p>
     </div>

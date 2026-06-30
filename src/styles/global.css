@@ -11,18 +11,18 @@
 @theme {
   /* Fonts */
   /* --font-family: 'Outfit Variable', sans-serif; */
-  --font-outfit: 'Outfit Variable', sans-serif;
+  --font-outfit: "Outfit Variable", sans-serif;
 
   /* Colors */
-  --color-accent: oklch(40.16% 0.087584 236.9217);       /* Navy Blue */
-  --color-dark: oklch(23.29% 0.0395 238.46);             /* Dark Navy */
-  --color-light: oklch(98.6% 0.0114 84.58);              /* Based on Yellow */
-  --color-accent-yellow: oklch(78.46% 0.165273 75.3442); 
-  --color-accent-red: oklch(60.95% 0.2056 29.03); 
+  --color-accent: oklch(40.16% 0.087584 236.9217); /* Navy Blue */
+  --color-dark: oklch(23.29% 0.0395 238.46); /* Dark Navy */
+  --color-light: oklch(98.6% 0.0114 84.58); /* Based on Yellow */
+  --color-accent-yellow: oklch(78.46% 0.165273 75.3442);
+  --color-accent-red: oklch(60.95% 0.2056 29.03);
   --color-accent-brown: oklch(38.06% 0.0819 55.12);
   --color-secondary-1: oklch(40.81% 0.0852 154.17);
   --color-secondary-2: oklch(37.82% 0.1445 30.8);
-  
+
   /* 
   --color-primary: oklch(40.16% 0.087584 236.9217);
   --color-accent-green: oklch(40.81% 0.0852 154.17); Green - reserved variable
@@ -30,8 +30,6 @@
   --color-primary-dark: color-mix(in oklch, black 50%, var(--color-primary));
   --color-primary-light: color-mix(in oklch, var(--color-accent-yellow) 5%, white); 
   */
-
-
 
   /* Typography */
   /* Fluid type scale (min, viewport, max) */
@@ -41,7 +39,7 @@
   --fs-h4: clamp(1.25rem, 3.5vw, 1.563rem);
   --fs-h5: clamp(1rem, 3vw, 1.25rem);
   --fs-h6: clamp(0.875rem, 2.5vw, 1rem);
-  --fs-p:  clamp(0.875rem, 2vw, 1rem);
+  --fs-p: clamp(0.875rem, 2vw, 1rem);
   --fs-small: clamp(0.75rem, 1.5vw, 0.875rem);
   --fs-quote: clamp(1rem, 2.5vw, 1.25rem);
   --fs-lead: clamp(1.125rem, 2.5vw, 1.325rem);
@@ -123,7 +121,6 @@
   }
 }
 
-
 :root {
-  @apply font-outfit text-dark bg-light antialiased;
+  @apply bg-light font-outfit text-dark antialiased;
 }
